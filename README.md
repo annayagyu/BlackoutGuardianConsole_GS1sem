@@ -14,26 +14,8 @@ Comunicação offline entre usuários
 Autenticação segura com dois níveis de acesso (Admin/Usuário Comum)
 
 Estrutura do Projeto
-BlackoutGuardianConsole/
-├── Models/               # Modelos de dados
-│   ├── Usuario.cs        # Entidade de usuário
-│   ├── FalhaEnergia.cs   # Registro de falhas
-│   ├── Alerta.cs         # Modelo de alertas
-│   └── Mensagem.cs       # Comunicação entre usuários
-│
-├── Services/             # Lógica de negócios
-│   ├── FalhaService.cs   # Gestão de falhas
-│   ├── AlertaService.cs  # Controle de alertas
-│   ├── LoginService.cs   # Autenticação
-│   ├── MensagemService.cs # Mensagens online
-│   └── RedeOfflineService.cs # Comunicação offline
-│
-├── Utils/                # Utilitários
-│   ├── Logger.cs         # Registro de logs
-│   └── ValidacaoUtils.cs # Validações de entrada
-│
-├── Program.cs            # Ponto de entrada
-└── README.md             # Documentação
+![{155975F8-420C-4C80-A365-7027B4B98EAE}](https://github.com/user-attachments/assets/42a6ed4d-abf9-41a9-91e1-5c8d3fb5fea5)
+
 Instruções de Execução
 Pré-requisitos
 .NET 6.0 SDK ou superior
