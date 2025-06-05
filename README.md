@@ -1,113 +1,103 @@
-Blackout Guardian - Sistema de Gerenciamento de Falhas de Energia
 
-Finalidade do Sistema
-O Blackout Guardian é uma solução completa para monitoramento e gestão de falhas de energia, desenvolvido em C# como aplicação de console. O sistema oferece:
 
-Registro e acompanhamento de falhas de energia
+# Blackout Guardian - Sistema Avançado de Resiliência Energética
 
-Sistema de alertas prioritários
+## 🌐 Visão Geral do Projeto
+O **Blackout Guardian** é uma solução inovadora para gestão de crises energéticas, desenvolvida em C# (.NET 6.0+) com arquitetura modular que combina:
+- **Monitoramento inteligente** de falhas
+- **Comunicação P2P offline** (Bluetooth/Wi-Fi Direct)
+- **Sistema de alertas prioritários** com IA básica
+- **Plataforma unificada** para usuários e administradores
 
-Relatórios personalizados por tipo de usuário
+## 🚀 Funcionalidades Principais
 
-Comunicação offline entre usuários
+### 🔌 Gestão de Falhas
+- Registro automatizado com localização geográfica
+- Classificação por severidade (Baixa/Média/Alta)
+- Histórico completo com carimbo temporal (dd/MM/yyyy HH:mm:ss)
 
-Autenticação segura com dois níveis de acesso (Admin/Usuário Comum)
+### 📡 Comunicação Resiliente
+- Modo offline com armazenamento local por 72h
+- Rede mesh entre dispositivos próximos
+- Sincronização automática pós-reconexão
+
+### 🔒 Segurança e Acessos
+- Autenticação de dois níveis (Admin/Usuário)
+- Criptografia AES-256 para dados sensíveis
+- Anonimização em relatórios públicos
+
+## ⚙️ Tecnologias Utilizadas
+| Componente        | Tecnologia               | Finalidade                     |
+|-------------------|--------------------------|--------------------------------|
+| Backend           | .NET 6.0+               | Lógica principal e APIs        |
+| Frontend          | Console Application      | Interface administrativa       |
+| Mobile            | React Native (futuro)    | Acesso remoto                  |
+| Persistência      | System.Text.Json         | Armazenamento em JSON          |
+| Comunicação       | Bluetooth/Wi-Fi Direct   | Rede P2P offline               |
 
 Estrutura do Projeto
+
 ![{155975F8-420C-4C80-A365-7027B4B98EAE}](https://github.com/user-attachments/assets/42a6ed4d-abf9-41a9-91e1-5c8d3fb5fea5)
 
-Instruções de Execução
-Pré-requisitos
-.NET 6.0 SDK ou superior
 
-Visual Studio 2022 (recomendado) ou VS Code
-------------------------------
+## 🛠️ Instalação e Execução
 
-Como executar
-Clone o repositório:
+### Pré-requisitos
+- [.NET 6.0 SDK](https://dotnet.microsoft.com/download) ou superior
+- IDE recomendada:
+  - Visual Studio 2022+ (Windows)
+  - VS Code com extensão C# (multiplataforma)
 
-bash
-git clone [URL_DO_REPOSITORIO]
-Navegue até a pasta do projeto:
+### Passo a Passo
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/BlackoutGuardian.git
 
-bash
-cd BlackoutGuardianConsole
-Execute o projeto:
+# Acesse o diretório
+cd BlackoutGuardian/BlackoutGuardianConsole
 
-bash
+# Execute o projeto
 dotnet run
-Ou abra o arquivo .sln no Visual Studio e pressione F5.
-------------------------------
+```
 
-Credenciais de Acesso
-Administrador:
+## 🔐 Credenciais de Teste
+| Tipo de Usuário  | Login      | Senha     |
+|------------------|------------|-----------|
+| Administrador    | RM550360   | 090603    |
+| Usuário Comum    | user       | user123   |
 
-Usuário:  RM550360
+## 📊 Estrutura de Dados
+```mermaid
+graph TD
+    A[Entrada no Sistema] --> B[Autenticação]
+    B --> C{Admin?}
+    C -->|Sim| D[Acesso Completo]
+    C -->|Não| E[Acesso Básico]
+    D --> F[Gestão de Falhas]
+    D --> G[Relatórios]
+    D --> H[Configurações]
+    E --> I[Registro de Falhas]
+    E --> J[Comunicação]
+```
 
-Senha: 090603
-------------------------------
+## 📦 Principais Arquivos
+- `falhas.json`: Registro estruturado de incidentes
+- `alertas.json`: Histórico de notificações prioritárias
+- `mensagens_offline.json`: Comunicação P2P armazenada
+- `logs.txt`: Auditoria do sistema
 
-Usuário Comum:
+## 🔮 Roadmap (Próximas Versões)
+1. Integração com sensores IoT (temperatura/umidade)
+2. Dashboard web para monitoramento em tempo real
+3. Módulo de simulação de crises no Unreal Engine
+4. Implementação de blockchain para logs imutáveis
 
-Usuário: user
+## 👥 Equipe de Desenvolvimento
+| Membro                      | RM      | Função Principal           |
+|-----------------------------|---------|----------------------------|
+| Anna Heloisa Soto Yagyu     | 550360  | Arquitetura de Segurança   |
+| Breno da Silva Santos       | 99275   | Backend .NET               |
+| Gustavo Kawamura Christofani| 99679   | Integração P2P             |
 
-Senha: user123
-------------------------------
-
-Dependências
-Principais Pacotes
-System.Text.Json - Para serialização dos dados
-
-Microsoft.NET.Sdk - SDK base do projeto
-
--------------------------------
-
-Armazenamento de Dados
-O sistema utiliza arquivos JSON para persistência:
-
-falhas.json - Registro de todas as falhas de energia
-
-alertas.json - Histórico de alertas gerados
-
-mensagens.json - Mensagens entre usuários
-
-mensagens_offline.json - Comunicação em modo offline
-
-logs.txt - Registro de atividades do sistema
-
--------------------------------
-
-Recursos Avançados
-Modo Offline:
-
-Simula rede mesh via Bluetooth/Wi-Fi Direct
-
-Mensagens armazenadas localmente até reconexão
-
-Validações Robustas:
-
-Formato estrito de datas (dd/MM/yyyy HH:mm:ss)
-
-Tipos de severidade pré-definidos
-
-Localização sem caracteres numéricos
-
--------------------------------
-
-Segurança:
-
-Separação de acessos por tipo de usuário
-
-Dados sensíveis nunca armazenados em texto puro
-
-------------------------------
-
-Integrantes:
-
-RM 550360  | Anna heloisa Soto Yagyu
-RM 99275    | Breno da Silva Santos
-RM 99679    | Gustavo Kawamura Christofani
------------------------------- 
-
-Licença
-Este projeto está licenciado sob a MIT License.
+## 📄 Licença
+Projeto acadêmico desenvolvido para fins educacionais - © 2025
