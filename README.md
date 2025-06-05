@@ -66,19 +66,6 @@ dotnet run
 | Administrador    | RM550360   | 090603    |
 | Usuário Comum    | user       | user123   |
 
-## 📊 Estrutura de Dados
-```mermaid
-graph TD
-    A[Entrada no Sistema] --> B[Autenticação]
-    B --> C{Admin?}
-    C -->|Sim| D[Acesso Completo]
-    C -->|Não| E[Acesso Básico]
-    D --> F[Gestão de Falhas]
-    D --> G[Relatórios]
-    D --> H[Configurações]
-    E --> I[Registro de Falhas]
-    E --> J[Comunicação]
-```
 
 ## 📦 Principais Arquivos
 - `falhas.json`: Registro estruturado de incidentes
@@ -93,11 +80,11 @@ graph TD
 4. Implementação de blockchain para logs imutáveis
 
 ## 👥 Equipe de Desenvolvimento
-| Membro                      | RM      | Função Principal           |
-|-----------------------------|---------|----------------------------|
-| Anna Heloisa Soto Yagyu     | 550360  | Arquitetura de Segurança   |
-| Breno da Silva Santos       | 99275   | Backend .NET               |
-| Gustavo Kawamura Christofani| 99679   | Integração P2P             |
+| Membro                      | RM      |
+|-----------------------------|---------|
+| Anna Heloisa Soto Yagyu     | 550360  |
+| Breno da Silva Santos       | 99275   |
+| Gustavo Kawamura Christofani| 99679   |
 
 ## 📄 Licença
 Projeto acadêmico desenvolvido para fins educacionais - © 2025
